@@ -73,6 +73,28 @@ body.light-theme .navbar .nav-link {
   color: var(--accent-blue);
 }
 
+.navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.navbar-toggler-icon {
+  filter: brightness(0) invert(1);
+}
+
+.navbar-dark .navbar-toggler-icon {
+  filter: invert(1);
+}
+
+body.light-theme .navbar-toggler {
+  border-color: rgba(0,0,0,.35);
+}
+
+body.light-theme .navbar-toggler-icon {
+  filter: invert(0);
+}
+
+
+
 .navbar .nav-link::after {
   content: "";
   position: absolute;
@@ -361,4 +383,12 @@ body.light-theme #scrollTopBtn {
   .animate-right {
     transform: translateY(24px);
   }
+
+  .navbar-toggler {
+    padding: 6px 8px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(6px);
+  }
 }
+
