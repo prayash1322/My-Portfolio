@@ -34,23 +34,29 @@ body.light-theme {
   display: none;
 }
 
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   background-color: var(--bg-main);
   color: var(--text-light);
   font-family: var(--bs-body-font-family);
-  overflow-x: hidden;
 }
 
 section {
   background-color: var(--bg-main);
 }
 
-/* Navbar */
 header {
   position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   width: 100%;
-  z-index: 10;
+  z-index: 20;
 }
 
 .navbar {
@@ -96,7 +102,9 @@ body.light-theme .navbar-toggler-icon {
   filter: invert(0);
 }
 
-
+.container {
+  overflow-x: hidden;
+}
 
 .navbar .nav-link::after {
   content: "";
@@ -208,6 +216,8 @@ body.light-theme .theme-toggle {
 }
 
 .surface {
+  max-width: 100%;
+  overflow: hidden;
   border-radius: 16px;
 }
 
@@ -373,6 +383,10 @@ body.light-theme #scrollTopBtn {
 
 /* Media Queries */
 @media (max-width: 576px) {
+  body{
+    overflow-x: hidden;
+  }
+
   section {
     padding: 48px 0;
   }
