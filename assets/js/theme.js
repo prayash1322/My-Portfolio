@@ -86,29 +86,38 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+/* Theme Toggle */
 document.addEventListener("DOMContentLoaded", () => {
-  const toggleBtn = document.getElementById("themeToggle");
-  const icon = toggleBtn.querySelector("i");
+  const toggleBtnMobile = document.getElementById("themeToggle");
+  const toggleBtnDesktop = document.getElementById("themeToggleDesktop");
+  const iconMobile = toggleBtnMobile.querySelector("i");
+  const iconDesktop = toggleBtnDesktop.querySelector("i");
 
   const savedTheme = localStorage.getItem("theme");
   if (savedTheme === "light") {
     document.body.classList.add("light-theme");
-    icon.classList.replace("fa-moon", "fa-sun");
+    iconMobile.classList.replace("fa-moon", "fa-sun");
+    iconDesktop.classList.replace("fa-moon", "fa-sun");
   }
 
-  toggleBtn.addEventListener("click", () => {
-    icon.classList.add("rotate");
+  const toggleTheme = (iconToAnimate) => {
+    iconToAnimate.classList.add("rotate");
 
     setTimeout(() => {
       document.body.classList.toggle("light-theme");
       const isLight = document.body.classList.contains("light-theme");
 
-      icon.classList.toggle("fa-moon", !isLight);
-      icon.classList.toggle("fa-sun", isLight);
+      iconMobile.classList.toggle("fa-moon", !isLight);
+      iconMobile.classList.toggle("fa-sun", isLight);
+      iconDesktop.classList.toggle("fa-moon", !isLight);
+      iconDesktop.classList.toggle("fa-sun", isLight);
 
       localStorage.setItem("theme", isLight ? "light" : "dark");
 
-      icon.classList.remove("rotate");
+      iconToAnimate.classList.remove("rotate");
     }, 150);
-  });
+  };
+
+  toggleBtnMobile.addEventListener("click", () => toggleTheme(iconMobile));
+  toggleBtnDesktop.addEventListener("click", () => toggleTheme(iconDesktop));
 });

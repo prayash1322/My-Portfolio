@@ -23,10 +23,18 @@
           <img src="./assets/images/Me/logo-me.png" alt="logo" width="95" height="95" class="img-fluid d-block">
         </a>
 
-        <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
-          data-bs-target="#mainNavbar">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+        <div class="d-flex align-items-center gap-3">
+          <button id="themeToggle"
+            class="theme-toggle d-flex align-items-center justify-content-center rounded-circle border-0 d-lg-none"
+            aria-label="Toggle theme">
+            <i class="fa-solid fa-moon"></i>
+          </button>
+
+          <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
+            data-bs-target="#mainNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
 
         <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
           <ul class="navbar-nav align-items-lg-center gap-lg-4">
@@ -36,8 +44,8 @@
             <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
             <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
 
-            <li class="nav-item ms-lg-3">
-              <button id="themeToggle"
+            <li class="nav-item ms-lg-3 d-none d-lg-block">
+              <button id="themeToggleDesktop"
                 class="theme-toggle d-flex align-items-center justify-content-center rounded-circle border-0"
                 aria-label="Toggle theme">
                 <i class="fa-solid fa-moon"></i>
