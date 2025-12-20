@@ -1,3 +1,4 @@
+/* Root Variables */
 :root {
   --bg-main: #0b1220;
   --bg-dark: #111827;
@@ -6,7 +7,6 @@
   --text-muted: #9ca3af;
   --bs-body-font-family: 'Poppins';
   --accent-blue: #3b82f6;
-  --accent-gold: #c7a24d;
   --blur-strength: 14px;
   --navbar-blur-bg: rgba(17, 24, 39, 0.4);
   --hero-overlay: rgba(17, 24, 39, 0.8);
@@ -15,6 +15,7 @@
   --contact-bg: radial-gradient(circle at top left, rgba(59, 130, 246, 0.12), transparent 60%);
 }
 
+/* Light Theme */
 body.light-theme {
   --bg-main: #f5f7fb;
   --bg-dark: #ffffff;
@@ -28,6 +29,7 @@ body.light-theme {
   --contact-bg: radial-gradient(circle at top left, rgba(37, 99, 235, 0.08), transparent 60%);
 }
 
+/* Scrollbar */
 ::-webkit-scrollbar {
   display: none;
 }
@@ -43,6 +45,7 @@ section {
   background-color: var(--bg-main);
 }
 
+/* Navbar */
 header {
   position: fixed;
   top: 0;
@@ -134,6 +137,7 @@ body.light-theme .theme-toggle {
   opacity: 0;
 }
 
+/* Buttons */
 .btn {
   transition: all 0.25s ease;
 }
@@ -143,6 +147,7 @@ body.light-theme .theme-toggle {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
 }
 
+/* Hero Section */
 #hero {
   padding-top: 90px;
   background:
@@ -166,6 +171,7 @@ body.light-theme .theme-toggle {
   letter-spacing: 3px;
 }
 
+/* Animations */
 .animate-up,
 .animate-left,
 .animate-right {
@@ -192,6 +198,7 @@ body.light-theme .theme-toggle {
   transform: translate(0);
 }
 
+/* Cards */
 .surface,
 .service-card,
 .project-card,
@@ -263,6 +270,7 @@ body.light-theme .theme-toggle {
   50% { opacity: 0; }
 }
 
+/* Contact Section */
 .contact-section {
   background: var(--contact-bg);
 }
@@ -298,6 +306,7 @@ body.light-theme .theme-toggle {
   border: 1px solid var(--accent-blue);
 }
 
+/* Footer */
 .footer {
   background-color: var(--bg-dark);
   border-top: 1px solid rgba(255, 255, 255, 0.06);
@@ -331,6 +340,7 @@ body.light-theme .theme-toggle {
   background: rgba(255, 255, 255, 0.12);
 }
 
+/* Scroll to Top Button */
 #scrollTopBtn {
   right: 24px;
   bottom: 24px;
@@ -361,7 +371,7 @@ body.light-theme #scrollTopBtn {
   color: var(--text-light);
 }
 
-
+/* Media Queries */
 @media (max-width: 576px) {
   section {
     padding: 48px 0;

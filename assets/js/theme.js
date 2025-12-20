@@ -1,4 +1,3 @@
-
 const animatedElements = document.querySelectorAll(
   '.animate-up, .animate-left, .animate-right'
 );
